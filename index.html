@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JUST 쇼핑몰</title>
+    <script src="./js/jquery-1.12.4.js"></script>
     <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
     <div class="wrap">
         <div class="header">
-            <h1><a href="#">JUST 쇼핑몰</a></h1>
+            <h1 class="logo"><a href="#">JUST 쇼핑몰</a></h1>
             <ul class="gnb">
                 <li><a href="#">탑</a>
                 <ul class="sub">
@@ -48,20 +49,22 @@
         </div>
 
         <div class="slide">
-            <a href="#"><img src="./images/slide1.jpg" alt="딱 일주일만 오픈기념 15%"></a>
-            <a href="#"><img src="./images/slide2.jpg" alt="세 가지혜택 받으러 가기"></a>
-            <a href="#"><img src="./images/slide3.jpg" alt="1+1 두 장 구매시 15% 할인"></a>
+            <div class="items">
+                <a href="#"><img src="./images/slide1.jpg" alt="딱 일주일만 오픈기념 15%"></a>
+                <a href="#"><img src="./images/slide2.jpg" alt="세 가지혜택 받으러 가기"></a>
+                <a href="#"><img src="./images/slide3.jpg" alt="1+1 두 장 구매시 15% 할인"></a>
+            </div>
         </div>
         
         <div class="contents">
             <div class="tab">
                 <div class="tab_title">
-                    <a href="#">공지사항</a>
-                    <a href="#">갤러리</a>
+                    <a class="notice_btn active" href="#">공지사항</a>
+                    <a class="gallery_btn" href="#">갤러리</a>
                 </div>
                 <div class="tab_contents">
                     <ul class="notice">
-                        <li><a href="#">2021년 2월 무이자 할부 카드 안내 2021년 2월 무이자 할부 카드 안내</a></li>
+                        <li><a href="#" class="show_modal">2021년 2월 무이자 할부 카드 안내 2021년 2월 무이자 할부 카드 안내</a></li>
                         <li><a href="#">2021년 2월 무이자 할부 카드 안내</a></li>
                         <li><a href="#">쿠폰 다운로드 및 사용 방법</a></li>
                         <li><a href="#">모바일 앱 설치하고 10% 할인쿠폰 받자!! 2021년 2월 무이자 할부 카드 안내</a></li>
@@ -99,5 +102,25 @@
             </div>
         </div>
     </div>
+    
+    <div class="modal">
+        <h2>별 헤는 밤</h2>
+        <p>봄이 이름을 없이 비둘기, 다 하나에 있습니다. 하나의 오면 이름자를 부끄러운 내 피어나듯이 버리었습니다. 덮어 자랑처럼 하나에 쉬이 우는 별 까닭입니다. 이 소학교 별들을 패, 있습니다. 피어나듯이 쉬이 별 하나에 별이 별 하나에 나는 까닭입니다. 다하지 파란 이름자를 라이너 소녀들의 흙으로 까닭입니다. 이름과, 별 된 나는 버리었습니다. 오면 추억과 나의 벌레는 이름을 버리었습니다. 계절이 않은 북간도에 이웃 프랑시스 별 이름과, 잠, 듯합니다.</p>
+        <a href="#" class="close">닫기</a>
+    </div>
+
+    <script>
+        $(function(){
+            console.log($('.show_modal'))
+
+            $('.show_modal').click(function(){
+                $('.modal').addClass('active')
+            })
+
+            $('.close').click(function(){
+                $('.modal').removeClass('active')
+            })
+        })
+    </script>
 </body>
 </html>
